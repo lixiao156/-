@@ -172,6 +172,10 @@ public class Array<E> {
         //return data[size-1];
      }
 
+    /**
+     * 获取动态数组索引为一的元素
+     * @return
+     */
      public E getFirst(){
         return  get(0);
      }
