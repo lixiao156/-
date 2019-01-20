@@ -1,6 +1,6 @@
 package chapteronearray.dynamic2;
 
-import stack.Array;
+import queue.Array;
 
 public class Main {
 

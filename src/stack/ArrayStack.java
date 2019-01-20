@@ -1,5 +1,7 @@
 package stack;
 
+import queue.Array;
+
 /**
  * 基于自定义动态数组实现的栈
  * 也需要支持泛型
@@ -73,6 +75,23 @@ public class ArrayStack<E> implements Stack<E> {
 
     @Override
     public E peek() {
-        return array.get(array.getSize()-1);
+        return array.getLast();
+    }
+
+    @Override
+    public String toString() {
+        StringBuffer res = new StringBuffer();
+        res.append("Stack:");
+        res.append("[");
+        for(int i = 0 ;i<array.getSize();i++){
+            res.append(array.get(i));
+            if(i != array.getSize()-1){
+                res.append(",");
+            }
+        }
+        //提示用户那个位置是栈顶元素
+        //因为每次加入到动态数组的末端
+        res.append("] top");
+        return res.toString();
     }
 }
